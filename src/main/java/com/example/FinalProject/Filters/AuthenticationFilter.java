@@ -59,7 +59,7 @@ public class AuthenticationFilter extends OncePerRequestFilter {
         if(SecurityContextHolder.getContext().getAuthentication() == null || SecurityContextHolder.getContext().getAuthentication() != null)
         {
             UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(userModel.getUserName(),userModel.getPassword(),
-                    List.of(new SimpleGrantedAuthority(userModel.getRoles().toString())));
+                    List.of(new SimpleGrantedAuthority("ROLE_"+userModel.getRoles().toString())));
             SecurityContextHolder.getContext().setAuthentication(authToken);
         }
 

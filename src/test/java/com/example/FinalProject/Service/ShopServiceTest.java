@@ -75,10 +75,6 @@ class ShopServiceTest {
         {
             shopService.deleteShop(shopFakeID);
         });
-        //assertNotNull();
-        //assertNotNull(shopModel);
-
-
     }
 
     @Test
